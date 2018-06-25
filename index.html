@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDas1iJhVppTi9oeu5TdECIqNGbvlpzcCo",
+        authDomain: "home-finance-1f066.firebaseapp.com",
+        databaseURL: "https://home-finance-1f066.firebaseio.com",
+        projectId: "home-finance-1f066",
+        storageBucket: "home-finance-1f066.appspot.com",
+        messagingSenderId: "911551882391"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <input id="input-water-paid" type="text" name="" placeholder="Water Bill">
+        <input id="input-rent-paid" type="text" name="" placeholder="Rent">
+        <input id="input-electricity-paid" type="text" name="" placeholder="Electricity Bill">
+        <label  id="label-water-remain" class="extra-option">+ Add water remain</label>
+        <input id="input-water-remain" type="text" class="hidden" placeholder="Water Remain">
+        <label id="label-rent-remain" class="extra-option">+ Add rent remain</label>
+        <input id="input-rent-remain" type="text" class="hidden" placeholder="Rent Remain">
+        <label id="label-electricity-remain" class="extra-option">+ Add electricity remain</label>
+        <input id="input-electricity-remain" type="text" class="hidden" placeholder="Electricity Remain">
+        <button id="btnClose" name="button">Close</button>
+        <button id="btnSubmit" name="button">Submit</button>
+
+      </div>
+
+
+    </div>
+
+    <div id="editModal" class="modal">
+      <!-- Edit Box -->
+      <div class="record edit-card">
+        <div id="date" class="grid-item">Nov 13</div>
+        <div id="paid" class="grid-item">Paid</div>
+        <div id="remain" class="grid-item">Remain</div>
+        <div id="water" class="grid-item">Νερό</div>
+        <input id="water-paid" class="grid-item" type="text" name="" value="">
+        <input id="water-remain" class="grid-item" type="text" name="" value="">
+        <div id="electricity" class="grid-item">Ρευμα</div>
+        <input id="electricity-paid" class="grid-item" type="text" name="" value="">
+        <input id="electricity-remain" class="grid-item" type="text" name="" value="">
+        <div id="rent" class="grid-item">Ενοίκιο</div>
+        <input id="rent-paid" class="grid-item" type="text" name="" value="">
+        <input id="rent-remain" class="grid-item" type="text" name="" value="">
+        <div id="options" class="grid-item">
+          <div id="update" class="btnOption">
+            update
+          </div>
+          <div id="cancel" class="btnOption">
+            cancel
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="body-container">
+      <h1>FINANCE</h1>
+      <button id="add-record" name="button">Add item</button>
+      <!-- <div id="record1" class="record">
+        <div id="date" class="grid-item">Nov 13</div>
+        <div id="paid" class="grid-item">Paid</div>
+        <div id="remain" class="grid-item">Remain</div>
+        <div id="water" class="grid-item">Νερό</div>
+        <div id="water-paid" class="grid-item">1</div>
+        <div id="water-remain" class="grid-item"></div>
+        <div id="electricity" class="grid-item">Ρευμα</div>
+        <div id="electricity-paid" class="grid-item"></div>
+        <div id="electricity-remain" class="grid-item"></div>
+        <div id="rent" class="grid-item">Ενοίκιο</div>
+        <div id="rent-paid" class="grid-item"></div>
+        <div id="rent-remain" class="grid-item"></div>
+        <div id="edit" class="grid-item">Edit</div>
+        <div id="more" class="grid-item">More</div>
+      </div> -->
+    </div>
+    <script src="myApp.js"></script>
+
+  </body>
+</html>
